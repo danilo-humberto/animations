@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-hover {
+  width: 400px;
+  height: 400px;
+  background-color: aquamarine;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.box-blur {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.democrart.com.br/cdn/shop/files/quadros-democrart-gustavo-jacob-paisagem-baixa-luz-vias-MT-cook-aoraki-NZ-galeria-de-arte-obras-de-arte.jpg?v=1724115920&width=2048");
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s;
+}
+
+.box-blur:hover {
+  transform: scale(1.1);
+  filter: blur(1px);
+}
