@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-img {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.antes {
+  background: url("https://images.ecycle.com.br/wp-content/uploads/2021/05/20195924/o-que-e-paisagem.jpg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.depois {
+  background: url("https://cursinhoparamedicina.com.br/wp-content/uploads/2022/10/Paisagem-1.jpg");
+}
+
+.antes,
+.depois {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.depois {
+  left: 100%;
+  transition: left 1s;
+}
+
+.box-img:hover .depois {
+  left: 0;
+}
