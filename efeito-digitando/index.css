@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 50px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
+
+.txt-animado span {
+  position: relative;
+}
+
+.txt-animado span::before {
+  content: "";
+  color: rgb(205, 0, 205);
+  animation: palavras 13s infinite;
+}
+
+.txt-animado span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-left: 2px solid rgb(205, 0, 205);
+  right: -10px;
+  animation: cursor 0.8s infinite, digitando 15s steps(10) infinite;
+  width: calc(100% + 12px);
+  background-color: rgb(53, 53, 53);
+}
+
+@keyframes digitando {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 12px);
+  }
+}
+
+@keyframes cursor {
+  0% {
+    border-left: 2px solid rgb(53, 53, 53);
+  }
+}
+
+@keyframes palavras {
+  0%,
+  25% {
+    content: "testando efeitos";
+  }
+  26%,
+  50% {
+    content: "testando efeitos 2";
+  }
+  51%,
+  75% {
+    content: "testando efeitos 3";
+  }
+  76%,
+  100% {
+    content: "testando efeitos 4";
+  }
+}
